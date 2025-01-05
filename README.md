@@ -47,20 +47,22 @@ input sin;
 output [3:0] q;
 reg [3:0] q;
 always @(posedge clk)
-begin
-q[0] <= sin;
-q[1] <= q[0];
-q[2] <= q[1];
-q[3] <= q[2];
+ begin
+ q[0] <= sin;
+ q[1] <= q[0];
+ q[2] <= q[1];
+ q[3] <= q[2];
 end
-endmodule
+ endmodule
 ```
 
 **RTL LOGIC FOR SISO Shift Register**
 ![Screenshot 2024-12-28 103932](https://github.com/user-attachments/assets/622ace49-6154-4267-9ae1-6526d207e8ac)
 
 **TIMING DIGRAMS FOR SISO Shift Register**
-![Screenshot 2024-12-28 103941](https://github.com/user-attachments/assets/9058baf4-1c32-4573-9dad-29e69f743c50)
+
+![image](https://github.com/user-attachments/assets/6a6f2d94-d1aa-4eaf-85fc-5b0d0da30ac9)
+
 
 **RESULTS**
 The 4-bit SISO (Serial-In Serial-Out) shift register was successfully implemented using Verilog in Quartus Prime. The functionality was validated using the truth table. The shift register correctly shifted the input data one bit at a time through the flip-flops on each clock pulse. The outputs q0, q1, q2, and q3 were observed to propagate the input data as expected, confirming the correct operation of the shift register.
